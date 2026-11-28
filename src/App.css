@@ -1,19 +1,6 @@
 :root {
-  color-scheme: light dark;
-  --bg: #f4f4f6;
-  --card: #ffffff;
-  --fg: #1c1c22;
-  --muted: #6a6a78;
-  --line: #d4d4dc;
-  --accent: #c8102e;
-  --good: #1e7d3a;
-  --bad: #b3261e;
-  --warn: #8a5a00;
   font-family: system-ui, sans-serif;
   line-height: 1.45;
-}
-@media (prefers-color-scheme: dark) {
-  :root { --bg: #15151a; --card: #1d1d24; --fg: #e8e8ee; --muted: #9a9aa8; --line: #2c2c36; --good: #5cc27a; --bad: #ff7b72; --warn: #e3b341; }
 }
 body { margin: 0; background: var(--bg); color: var(--fg); }
 h1 { margin: 0; font-size: 1.6rem; }
@@ -26,6 +13,8 @@ a { color: var(--accent); }
 .bad { color: var(--bad); }
 .warn { color: var(--warn); }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 0.9rem 1rem; margin: 0.75rem 0; }
+button { font: inherit; padding: 0.35rem 0.8rem; border: 1px solid var(--line); border-radius: 6px; background: var(--button); color: var(--fg); cursor: pointer; }
+button:disabled { opacity: 0.5; cursor: default; }
 .row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: 0.6rem; }
 .arena-lab { max-width: 52rem; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
 h2 { font-size: 1.1rem; display: flex; gap: 0.5rem; align-items: baseline; }
@@ -33,4 +22,4 @@ h2 { font-size: 1.1rem; display: flex; gap: 0.5rem; align-items: baseline; }
 .drop.over { border-color: var(--accent); }
 table { width: 100%; border-collapse: collapse; }
 th, td { text-align: left; padding: 0.35rem 0.5rem; border-bottom: 1px solid var(--line); }
-.actions { white-space: nowrap; text-align: right; }
+.actions { white-space: nowrap; text-align: right; }.actions button { padding: 0.1rem 0.5rem; margin-left: 0.25rem; }
